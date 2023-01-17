@@ -25,12 +25,13 @@ export default function TaskPage( { staticfilterdTasks } ) {
 
     return(    
     <Layout title="Task page">
-        
+
+
             <ul>
                 {filteredTasks && 
-                filteredTasks.map((task) => <Task key={task.id} task={task} />)}
+                filteredTasks.map((task) => <Task key={task.id} task={task} taskDeleted={mutate} />)}
             </ul>        
-
+            
             <Link href="/main-page">
                 <div className="flex cursor-pointer mt-12">
                     <svg className="w-6 h-6" 
@@ -45,7 +46,7 @@ export default function TaskPage( { staticfilterdTasks } ) {
                         d="M11 19l-7-7 7-7m8 14l-7-7 7-7">
                         </path>
                     </svg>
-                    <span>Back to main page</span>
+                <span>Back to main page</span>
                 </div>
             </Link>
 

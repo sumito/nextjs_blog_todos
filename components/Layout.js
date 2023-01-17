@@ -6,7 +6,7 @@ export default function Layout({ children, title= "Default title"}){
             <Head>
                 <title>{title}</title>
             </Head>
-            <main className="flex ">
+            <main className=" ">
                 
                 {children}
             </main>
